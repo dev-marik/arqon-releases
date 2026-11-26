@@ -1,0 +1,46 @@
+name: 🔌 Мій інвертор
+description: Додати інвертор або підтвердити, що він працює
+labels: [інвертор]
+body:
+  - type: markdown
+    attributes:
+      value: Допоможи розширити список «перевірено». Звір цифри ARQON із застосунком виробника або екраном інвертора.
+  - type: input
+    id: model
+    attributes:
+      label: Марка і модель
+      placeholder: Sofar HYD 6000-EP
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Як підключено
+      options:
+        - Wi-Fi-логер Solarman (окремий модуль, серійний номер з 10 цифр)
+        - Modbus TCP-адаптер
+        - Вбудований Wi-Fi (SmartESS, SolarMAN, інший застосунок)
+        - Не знаю
+    validations:
+      required: true
+  - type: dropdown
+    id: works
+    attributes:
+      label: Що вже працює в ARQON
+      options:
+        - Усе збігається
+        - Частина цифр неправильна
+        - Не підключається
+        - Ще не пробував
+    validations:
+      required: true
+  - type: input
+    id: picked
+    attributes:
+      label: Яку модель обрано в налаштуваннях ARQON
+      placeholder: Sofar hybrid
+  - type: textarea
+    id: details
+    attributes:
+      label: Деталі й скріншоти
+      description: Які цифри не збігаються і скільки показує застосунок виробника.

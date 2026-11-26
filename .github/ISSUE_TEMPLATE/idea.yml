@@ -1,0 +1,11 @@
+name: 💡 Ідея
+description: Що додати чи покращити
+labels: [ідея]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Ідея
+      description: Що хочеш бачити в ARQON і навіщо це тобі.
+    validations:
+      required: true

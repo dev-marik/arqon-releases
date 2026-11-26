@@ -1,0 +1,49 @@
+name: 🐞 Щось не працює
+description: Помилка, неправильні цифри, збій
+labels: [баг]
+body:
+  - type: markdown
+    attributes:
+      value: Дякуємо! Чим більше деталей, тим швидше виправимо. Не пиши сюди паролі й серійні номери повністю.
+  - type: textarea
+    id: what
+    attributes:
+      label: Що сталося
+      description: Що робив, що побачив і що мало бути натомість.
+      placeholder: Відкрив ARQON удома, а він пише «Немає зв'язку з логером», хоча в Deye Cloud усе є.
+    validations:
+      required: true
+  - type: input
+    id: inverter
+    attributes:
+      label: Інвертор
+      placeholder: Deye SUN-6K-SG04LP1, Sandisolar SD 6.2 кВт…
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Як підключено
+      options:
+        - Wi-Fi-логер Solarman (локально)
+        - Modbus TCP-адаптер
+        - Хмара SmartESS
+        - Інше
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версія ARQON
+      description: Налаштування Android → Застосунки → ARQON.
+      placeholder: "0.13.2"
+  - type: input
+    id: phone
+    attributes:
+      label: Телефон і версія Android
+      placeholder: Samsung A54, Android 15
+  - type: textarea
+    id: shots
+    attributes:
+      label: Скріншоти
+      description: Перетягни сюди скріншоти ARQON (і, якщо є, застосунку виробника з тими ж цифрами).
